@@ -32,13 +32,13 @@ save|31
 hstack|24
 
 ### Repos: 
-https://github.com/parasdahal/deepnet
-https://github.com/rougier/numpy-100
-https://github.com/Kyubyong/numpy_exercises
-https://github.com/kdexd/digit-classifier
-https://github.com/stasi009/NumpyWDL
-https://github.com/MorvanZhou/simple-neural-networks
-https://github.com/carefree0910/MachineLearning
-https://github.com/Kyubyong/tensorflow-exercises
-https://github.com/kirit93/NumpyTutorial
-https://github.com/ahmedfgad/NumPyCNN
+https://github.com/parasdahal/deepnet  
+https://github.com/rougier/numpy-100  
+https://github.com/Kyubyong/numpy_exercises   
+https://github.com/kdexd/digit-classifier  
+https://github.com/stasi009/NumpyWDL  
+https://github.com/MorvanZhou/simple-neural-networks  
+https://github.com/carefree0910/MachineLearning  
+https://github.com/Kyubyong/tensorflow-exercises  
+https://github.com/kirit93/NumpyTutorial  
+https://github.com/ahmedfgad/NumPyCNN  
