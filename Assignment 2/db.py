@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Integer, ForeignKey, Text
+from sqlalchemy import Column, String, Integer, ForeignKey, TEXT
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
@@ -17,7 +17,7 @@ class Restaurant(Base):
 class Reviews(Base):
     __tablename__ = 'reviews'
     id = Column(Integer, primary_key=True)
-    review = Column(Text)
+    review = Column(TEXT(convert_unicode=True))
     restaurant_id = Column(Integer, ForeignKey('restaurant_names.id'))
 
 

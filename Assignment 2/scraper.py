@@ -4,10 +4,10 @@ from bs4 import BeautifulSoup
 reviews_list = []
 base_url = 'https://www.yelp.com'
 url = 'https://www.yelp.com/search?find_desc=Restaurants&find_near=cn-tower-toronto'
-proxies1 = {'http': '193.200.151.69:40336',
+'''proxies1 = {'http': '193.200.151.69:40336',
             'https': '80.73.90.18:3128'
-            }
-page = requests.get(url, proxies=proxies1)
+            }'''
+page = requests.get(url, verify=False)
 print(page.status_code)
 soup_obj = BeautifulSoup(page.content, 'html.parser')
 
@@ -16,12 +16,10 @@ restaurant_list_links = soup_obj.findAll("h3", {
 
 links_dict = {i.a.string: base_url + i.a['href'] for i in restaurant_list_links if i is not None}
 
-proxies2 = {'http': '103.38.4.246:49356',
-            'https': '46.253.96.180	:41258'
-            }
+
 
 for key, value in links_dict.items():
-    review_page = requests.get(value, proxies=proxies2)
+    review_page = requests.get(value, verify= False)
     soup_obj = BeautifulSoup(review_page.content, 'html.parser')
     review_links_obj = soup_obj.findAll(
         'div', {'class': 'review-content'})
