@@ -1,3 +1,4 @@
+from scraper import reviews_list
 from sqlalchemy import Column, String, Integer, ForeignKey, TEXT
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
@@ -25,5 +26,18 @@ def get_session():
     engine = create_engine('sqlite:///restaurants.db')
     Session = sessionmaker(bind=engine)
     Base.metadata.create_all(engine)
-    session = Session()
-    return session
+    session1 = Session()
+    return session1
+
+
+session = get_session()
+for i in reviews_list:
+    for key, value in i.items():
+        restaurant = Restaurant(name=key)
+        session.add(restaurant)
+        session.commit()
+        for j in value:
+            review = Reviews(review=j, restaurant_name=restaurant)
+            session.add(review)
+session.commit()
+session.close()
