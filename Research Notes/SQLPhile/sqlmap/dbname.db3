@@ -1,0 +1,4 @@
+<sql name="get_stat">
+    SELECT id, name FROM users 
+    WHERE {this.filters}
+</sql>

@@ -1,8 +1,6 @@
-from collections import Counter
 from statistics import mean
 from nltk import tokenize
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-import pandas as pd
 from db import get_session, Restaurant, Reviews
 
 session = get_session()
